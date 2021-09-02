@@ -2,7 +2,7 @@
 terraform {
     backend "s3" {
         bucket = "sensor-raw-data"
-        key    = "backend/terraform1.tfstate"
+        key    = "backend/terraform.tfstate"
         region = "us-east-1"
 }
 }
@@ -33,20 +33,5 @@ provider "aws" {
 # Create a VPC
 resource "aws_vpc" "example" {
     cidr_block = "10.0.0.0/16"    # Class B CIDR
-}
-
-variable "access_key" {
-    type = string
-    default = "XXXXXXXXXXXXXXXXXXXXX"
-}
-
-variable "secret_key" {
-    type = string
-    default = "XXXXXXXXXXXXXXXXXXXXXXXXXXX"
-}
-
-output "vpc-name" {
-    description = "CIDR block of VPC."
-    value = aws_vpc.example.cidr_block
 }
 
