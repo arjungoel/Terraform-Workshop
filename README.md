@@ -5,3 +5,10 @@
 3. Terraform runs as a single binary named `terraform`.
 4. The final step is to make sure that the `terraform binary` is available on the system PATH.
 5. Finally verify the installation of terraform with the following command: `terraform`  OR   `terraform --version`
+
+
+**Terraform Remote and Backend**: 
+
+`https://www.terraform.io/docs/language/settings/backends/s3.html`
+`https://www.terraform.io/docs/language/settings/backends/remote.html`
+
